@@ -5,7 +5,7 @@ import Meetupitems from './Meetupsitems'
 export default function Meetuplist(props) {
     return (
         <ul className={classes.list}>
-            {props.meetups.map((meetup) => (
+            {props.meetup.map((meetup) => (
                 <Meetupitems
 
                     key={meetup.id}
