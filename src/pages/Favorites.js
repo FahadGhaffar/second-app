@@ -8,11 +8,13 @@ export default function Favorties() {
     const favoitesCtx = useContext(FavoitesContext);
     let context;
 
-    if (favoitesCtx.length === 0) {
+    if (favoitesCtx.totalFavorites === 0) {
         context = <p> Empty</p>
+
     } else {
 
         context = <Meetuplist meetup={favoitesCtx.favorites} />
+
     }
 
 
@@ -20,7 +22,7 @@ export default function Favorties() {
         <section>
             <h1>Favorites</h1>
 
-            {context}
+            <div>{context}</div>
         </section>
 
 

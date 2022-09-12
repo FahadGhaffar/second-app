@@ -10,7 +10,18 @@ export default function Meetupitems(props) {
     const itemIsFavorite = favoriteCtx.isFavorite(props.id);
 
     function toggleFavoriteStatusHandler() {
-        if (itemIsFavorite) {
+        favoriteCtx.addFavorite({
+
+            id: props.id,
+            title: props.title,
+            description: props.description,
+            image: props.image,
+            address: props.address
+
+
+        });
+        console.log(itemIsFavorite);
+        if (!itemIsFavorite) {
 
             favoriteCtx.removeFavorite(props.id);
         } else {

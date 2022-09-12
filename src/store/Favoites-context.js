@@ -19,8 +19,6 @@ export function FavoitesContextProvider(props) {
 
 
     function addFavoriteHandler(favoriteMeetup) {
-
-
         setUserFavorites((preUserFavorites) => {
             return preUserFavorites.concat(favoriteMeetup);
         });
@@ -37,6 +35,7 @@ export function FavoitesContextProvider(props) {
     }
 
     function itemIsFavoriteHandler(meetupId) {
+
         return userFavorites.some(meetup => meetup.id === meetupId);
     }
 
